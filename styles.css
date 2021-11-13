@@ -1,6 +1,7 @@
 *, *::before, *::after {
     font-family: 'Open Sans', sans-serif;
     user-select: none;
+    margin: 0;
 }
 
 /* Simply a container for the before and after selectors */
@@ -44,14 +45,21 @@
     }
 }
 
-.money {
+.text-container{
     position: absolute;
     bottom: 50vh;
+    left: 50vmin;
     z-index: 100;
+    font-size: 3vmin;
+    margin: 10px;
+    margin-right: 5%;
+    max-height: 50vh;
+}
+
+.money {
     color: white;
     text-shadow: 0 0 5px hsl(0, 0%, 0%, .5);
-    left: 50vmin;
-    font-size: 6vmin;
+    font-size: 5vmin;
     opacity: .8;
 }
 
@@ -74,7 +82,7 @@
         transform: rotate(var(--rotation)) translateY(1vh);
     }
     to {
-        transform: rotate(calc(var(--rotatio + 10deg))) translateY(0vh);
+        transform: rotate(calc(var(--rotation) + 10deg)) translateY(0);
     }
 }
 

@@ -20,8 +20,7 @@ async function setupTrash() {
     const amountRaised = await fetch("https://tscache.com/donation_total.json")
     .then(res => res.json())
     .then(data => data.count)
-    moneyElem.innerText = currencyFormatter.format(amountRaised)
-
+    moneyElem.innerText = `${currencyFormatter.format(amountRaised)} raised for TeamSeas!`
     const amountLeftToRaise = Math.max(MAX_MONEY_RAISED - amountRaised, 0);
     const stringifiedAmount = trashFormatter.format(amountLeftToRaise);
     const trashAmount = {
